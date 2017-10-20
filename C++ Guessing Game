@@ -1,0 +1,49 @@
+// Guess The Number v2.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int CorrectNum;
+	int GuessNum;
+	CorrectNum = 25;
+	bool Correct = false;
+
+	while (Correct == false) {
+		cout << "I am thinking of a number between 0 and 100" << endl << "What is that number?" << endl;
+		cin >> GuessNum;
+
+		if (GuessNum < CorrectNum) {
+			cout << "Too low" << endl << endl;
+
+		}
+
+
+		if (GuessNum > CorrectNum) {
+			cout << "Too high" << endl << endl;
+
+		}
+
+		if (GuessNum > 100) {
+			cout << GuessNum << " is above 100! I said the number is between 0 and 100" << endl << endl;
+
+		}
+
+		if (GuessNum < 0) {
+			cout << GuessNum << " is bellow 0! I said the number is between 0 and 100" << endl << endl;
+
+		}
+	
+		if (GuessNum == CorrectNum)
+		{
+				cout << "That is correct!" << endl << "Welldone!" << endl;
+				Correct = true;
+			}
+
+		}
+	return 0;
+	}
+
